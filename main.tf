@@ -11,11 +11,7 @@ provider "aws" {
   region  = var.region
 }
 
-module "s3-bucket" {
-  source  = "app.terraform.io/my-ramyun-company/s3-bucket/aws"
-  version = "2.2.0"
-  # insert required variables here
-}
+
 
 resource "aws_vpc" "hashicat" {
   cidr_block           = var.address_space
